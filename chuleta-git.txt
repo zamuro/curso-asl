@@ -1,0 +1,29 @@
+### INICIALIZAR REPOSITORIO GIT ###
+cd
+mkdir curso-tarde
+cd curso-tarde
+git init
+
+## ACTUALIZAR ARCHIVOS
+echo "(nombre cedula institución)" > (cedula).txt
+git remote add curso-tarde git@150.188.18.138:curso-tarde 
+git pull curso-tarde master
+
+## HACER PUSH
+git add .
+git commit -m "(nombre)"
+git push curso-tarde master
+
+## CREAR CLAVE SSH
+cd 
+ssh-keygen -t rsa
+
+## SUBIR CLAVE A REPOSITORIO
+mkdir (numero de cédula)
+cd (numero de cédula)
+cp ~/.ssh/id_rsa.pub .
+cd ..
+git pull curso-tarde master
+git add (número de cédula) (numero de cédula)/id_rsa.pub
+git commit -m "llave pública de (nombre)"
+git push curso-tarde master
