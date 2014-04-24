@@ -1,0 +1,13 @@
+abrir consola como root: su
+modificar /etc/apt/sources.list: nano /etc/apt/sources.list
+	descomentar linea deb-src
+apt-get update
+apt-get install dpkg-dev
+cd /home/usuario/Escritorio
+mkdir apache2
+cd apache2
+apt-get source apache2
+cd apache2.2-22
+cd debian
+ls 
+
