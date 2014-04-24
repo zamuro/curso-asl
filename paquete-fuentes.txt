@@ -1,13 +1,38 @@
-abrir consola como root: su
-modificar /etc/apt/sources.list: nano /etc/apt/sources.list
-	descomentar linea deb-src
+#PRIMERA PARTE
+#abrir consola como root: su
+#modificar /etc/apt/sources.list: 
+nano /etc/apt/sources.list
+#descomentar linea deb-src
 apt-get update
 apt-get install dpkg-dev
+###
 cd /home/usuario/Escritorio
-mkdir apache2
-cd apache2
-apt-get source apache2
-cd apache2.2-22
+mkdir evince
+cd evince
+apt-get source evince
+ls
+cd evince-3.4.0/
+#SEGUNDA PARTE
 cd debian
 ls 
+nano control
+#[modificar descripcion. Añadir "Modificado" al final de la línea]
+#guardar: ctrl+o, cerrar: ctrl+x
+cd /home/usuario/Escritorio/evince/evince-3.4.0
+apt-get install devscripts build-essential fakeroot
+apt-get build-dep evince
+debuild -us -uc
+cd /home/usuario/Escritorio/evince
+dpkg -i evince*.deb
+
+
+
+
+
+
+
+
+
+
+
 

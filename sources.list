@@ -1,0 +1,13 @@
+# Archivo generado por el Instalador de Canaima
+
+#
+# Repositorios de Canaima GNU/Linux
+#
+
+# Repositorio Estable (3.1)
+#deb http://paquetes.canaima.softwarelibre.gob.ve/ auyantepui main aportes no-libres
+#deb-src http://paquetes.canaima.softwarelibre.gob.ve/ auyantepui main aportes no-libres
+
+# Repositorio de Desarrollo (4.0)
+deb http://paquetes.canaima.softwarelibre.gob.ve/ kerepakupai main aportes no-libres
+deb-src http://paquetes.canaima.softwarelibre.gob.ve/ kerepakupai main aportes no-libres
