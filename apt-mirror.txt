@@ -1,0 +1,14 @@
+#MIRRORS
+#Instalar apt-mirror
+apt-get update
+apt-get install apt-mirror
+#editar /etc/apt/mirror.list y añadir las líneas de los repositorios
+#agregar las rutas
+#crear un script de limpieza
+set cleanscript $var_path/clean.sh
+#en el script de limpieza, elimimar los directorios que queremos limpiar
+clean http://ftp.de.debian.org
+#ejecutar apt-mirror (como root)
+apt-mirror
+#actualizar semanalmente el mirror. Crear un cron job
+#modificar sources.list del usuario
