@@ -1,0 +1,46 @@
+ ##COMO ROOT
+#INSTALAR REPREPRO
+apt-get install reprepro apache2
+#CAMBIAR LOS PERMISOS DEL DOCUMENT ROOT DE APACHE
+chown -R usuario:usuario /var/www
+##COMO USUARIO	
+#CREAR DIRECTORIO EN APACHE
+mkdir -p /var/www/repositorio-tarde/conf
+#CREAR CLAVE
+gpg --gen-key
+#REVISAR CLAVES CREADAS
+gpg --list-keys
+#EXPORTAR CLAVE PÚBLICA
+gpg --armor --export (Id. de la clave creada) > /var/www/repositorio-tarde/clave.asc
+#CREAR ARCHIVO DE DISTRIBUCIONES
+touch /var/www/repositorio-tarde/conf/distributions
+#EDITAR ARCHIVO DE DISTRIBUCIONES
+Origin: Academia de Software Libre
+Label: Respositorio local
+Suite: stable
+Codename: kerepakupai
+Architectures: i386
+Components: main
+Description: Repositorio local para los paquetes de la institución
+DebIndices: Packages Release .gz .bz2
+SignWith: (Id. de la clave creada)
+#ENTRAR AL DIRECTORIO DEL REPOSITORIO Y EXPORTAR
+cd /var/www/repositorio-tarde/ && reprepro -VVV export
+#CREAR ENLACES
+reprepro -VVV createsymlinks
+#AGREGAR PAQUETES
+reprepro includedeb (distribución) (ruta absoluta del paquete)
+reprepro remove (nombre de la distribución) (nombre del paquete)
+
+
+
+
+
+
+
+
+
+
+
+
+
