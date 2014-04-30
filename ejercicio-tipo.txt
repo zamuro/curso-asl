@@ -1,0 +1,6 @@
+En una instalación base (es decir, sin entorno gráfico), realizar las siguientes tareas:
+1. Añadir repositorios de Debian Backports
+2. Actualizar sistema
+3. Clonar repositorio git de su preferencia
+4. Añadir un archivo al repositorio git de curso-asl
+5. Crear un repositorio y que éste sea visible por http (puerto 80)
