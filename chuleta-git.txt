@@ -1,29 +1,35 @@
-### INICIALIZAR REPOSITORIO GIT ###
+##LOCAL - SERVIDOR
+#como root
+apt-get install git git-core
+useradd -d /opt/aplicaciones -s /bin/bash -r -m git
+passwd git
+#como usuario git
 cd
-mkdir curso-tarde
-cd curso-tarde
-git init
-
-## ACTUALIZAR ARCHIVOS
-echo "(nombre cedula institución)" > (cedula).txt
-git remote add curso-tarde git@150.188.18.138:curso-tarde 
-git pull curso-tarde master
-
-## HACER PUSH
-git add .
-git commit -m "(nombre)"
-git push curso-tarde master
-
-## CREAR CLAVE SSH
-cd 
+mkdir curso-soporte-local
+cd curso-soporte-local
+git --bare init
 ssh-keygen -t rsa
-
-## SUBIR CLAVE A REPOSITORIO
-mkdir (numero de cédula)
-cd (numero de cédula)
-cp ~/.ssh/id_rsa.pub .
-cd ..
-git pull curso-tarde master
-git add (número de cédula) (numero de cédula)/id_rsa.pub
-git commit -m "llave pública de (nombre)"
-git push curso-tarde master
+#como usuario regular
+cd
+mkdir curso-soporte-local
+touch (cedula).txt
+echo "(nombre cedula correo institucion)" > (cedula).txt
+ssh-keygen -t rsa
+#como root
+cat /home/usuario/.ssh/id_rsa.pub > /opt/aplicaciones/.ssh/authorized_keys
+chown -R git:git /opt/aplicaciones/.ssh
+#como usuario
+cd
+git clone git@150.188.18.198:curso-soporte
+cp (cedula).txt curso-soporte
+cp (cedula).txt curso-soporte-local
+cd curso-soporte
+git add .
+git commit -m "(cedula)"
+git push 
+cd ../curso-soporte-local
+git init
+git remote add local git@localhost:curso-soporte-local master
+git add .
+git commit -m "(cedula)"
+git push local master
