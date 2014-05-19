@@ -5,15 +5,15 @@ apt-get install reprepro apache2
 chown -R usuario:usuario /var/www
 ##COMO USUARIO	
 #CREAR DIRECTORIO EN APACHE
-mkdir -p /var/www/repositorio-tarde/conf
+mkdir -p /var/www/repositorio/conf
 #CREAR CLAVE
 gpg --gen-key
 #REVISAR CLAVES CREADAS
 gpg --list-keys
 #EXPORTAR CLAVE PÚBLICA
-gpg --armor --export (Id. de la clave creada) > /var/www/repositorio-tarde/clave.asc
+gpg --armor --export (Id. de la clave creada) > /var/www/repositorio/clave.asc
 #CREAR ARCHIVO DE DISTRIBUCIONES
-touch /var/www/repositorio-tarde/conf/distributions
+touch /var/www/repositorio/conf/distributions
 #EDITAR ARCHIVO DE DISTRIBUCIONES
 Origin: Academia de Software Libre
 Label: Respositorio local
@@ -25,7 +25,7 @@ Description: Repositorio local para los paquetes de la institución
 DebIndices: Packages Release .gz .bz2
 SignWith: (Id. de la clave creada)
 #ENTRAR AL DIRECTORIO DEL REPOSITORIO Y EXPORTAR
-cd /var/www/repositorio-tarde/ && reprepro -VVV export
+cd /var/www/repositorio/ && reprepro -VVV export
 #CREAR ENLACES
 reprepro -VVV createsymlinks
 #AGREGAR PAQUETES
