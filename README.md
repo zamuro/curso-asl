@@ -1,5 +1,4 @@
 curso-asl
 =========
 
-Curso soporte especializado ASL Ccs
-Turno Tarde
+Curso soporte especializado ASL
