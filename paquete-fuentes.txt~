@@ -7,23 +7,23 @@ apt-get update
 apt-get install dpkg-dev
 ###
 cd /home/usuario/Escritorio
-mkdir gedit
-cd gedit
-apt-get source gedit
+mkdir geany
+cd geany
+apt-get source geany
 ls
-cd gedit-1.24.1+dfsg
+cd geany-1.24.1+dfsg
 #SEGUNDA PARTE
 cd debian
 ls 
 nano control
 #[modificar descripcion. Añadir "Modificado" al final de la línea]
 #guardar: ctrl+o, cerrar: ctrl+x
-cd /home/usuario/Escritorio/gedit/gedit-1.24.1+dfsg
+cd /home/usuario/Escritorio/geany/geany-1.24.1+dfsg
 apt-get install devscripts build-essential fakeroot
-apt-get build-dep gedit
+apt-get build-dep geany
 debuild -us -uc
-cd /home/usuario/Escritorio/gedit
-dpkg -i gedit*.deb
+cd /home/usuario/Escritorio/geany
+dpkg -i geany*.deb
 
 
 
