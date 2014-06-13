@@ -1,4 +1,4 @@
-1. Crear un repositorio Git local. Debe crearse un usuario git-examen para tal fin. Usar de directorio base para ese usuario /home/git-examen
+1. Crear un repositorio Git local. Debe crearse un usuario git-examen-tarde para tal fin. Usar de directorio base para ese usuario /home/git-examen-tarde
 2. Crear un archivo Examen-(Número de la Cédula de Identidad) con los siguientes datos:
 	-Nombre Completo
 	-Cédula de Indentidad
@@ -8,5 +8,5 @@ Dicho archivo debe ser añadido al repositorio local
 3. Añadir id_rsa.pub del repositorio github al archivo de claves autorizadas del repositorio git local
 4. Añadir documentos pdf del repositorio Github al repositorio local. Cambiar los propietarios.
 5. Crear un repositorio apt llamado "local"
-6. Descargar fuentes de qpdfview y añadirlas a un directorio qpdfview en el usuario git-examen
-7. Configurar usuario.conf con los datos del repositorio local
+6. Descargar fuentes de qpdfview y añadirlas a un directorio qpdfview en el usuario git-examen-tarde
+7. Configurar usuario.conf con los datos del repositorio local de canaima-desarrollador y subirlo al repositorio git local
