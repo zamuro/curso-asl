@@ -1,15 +1,12 @@
-En una instalación base:
-1. Clonar el repositorio del curso
-https://github.com/zamuro/curso-asl.git
-2. Crear un repositorio Git local. Debe crearse un usuario git para tal fin
-3. Crear un archivo README-(Número de la Cédula de Identidad) con los siguientes datos:
+1. Crear un repositorio Git local. Debe crearse un usuario git-examen para tal fin. Usar de directorio base para ese usuario /home/git-examen
+2. Crear un archivo Examen-(Número de la Cédula de Identidad) con los siguientes datos:
 	-Nombre Completo
 	-Cédula de Indentidad
 	-Dirección de correo electrónico
-Dicho archivo debe ser añadido al repositorio local y al directorio prueba-(manana|tarde) del repositorio github del curso
-4. Añadir id_rsa.pub del repositorio github al archivo de claves autorizadas del repositorio git local
-5. Configurar apt-mirror para crear un repositorio local de Canaima
-6. Crear un repositorio llamado "local"
-7. Descargar fuentes de php5 y añadirlas al repositorio local
-8. Instalar canaima-desarrollo y canaima-semilla
-9. Configurar usuario.conf con los datos del repositorio local
+	-Institución a la que pertenece
+Dicho archivo debe ser añadido al repositorio local
+3. Añadir id_rsa.pub del repositorio github al archivo de claves autorizadas del repositorio git local
+4. Añadir documentos pdf del repositorio Github al repositorio local. Cambiar los propietarios.
+5. Crear un repositorio apt llamado "local"
+6. Descargar fuentes de qpdfview y añadirlas a un directorio qpdfview en el usuario git-examen
+7. Configurar usuario.conf con los datos del repositorio local
