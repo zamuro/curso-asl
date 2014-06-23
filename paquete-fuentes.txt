@@ -7,7 +7,7 @@ nano /etc/apt/sources.list
 apt-get update
 apt-get install dpkg-dev
 ###COMO USUARIO
-cd 
+cd /home/usuario/Escritorio/
 mkdir epdfview
 cd epdfview
 apt-get source epdfview  ##COMO ROOT
@@ -19,11 +19,11 @@ ls
 nano control
 #modificar descripcion. Añadir "Modificado por (nombre)" al final de la línea
 #guardar: ctrl+o, cerrar: ctrl+x
-cd /home/usuario/epdfview/epdfview-0.1.8
+cd /home/usuario/Escritorio/epdfview/epdfview-0.1.8
 apt-get install devscripts build-essential fakeroot
 apt-get build-dep epdfview
 debuild -us -uc
-cd /home/usuario/epdfview
+cd /home/usuario/Escritorio/epdfview
 dpkg -i epdfview*.deb
 
 
