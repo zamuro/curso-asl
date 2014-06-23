@@ -10,7 +10,7 @@ apt-get install dpkg-dev
 cd 
 mkdir epdfview
 cd epdfview
-apt-get source epdfview  ##COMO ROOT
+apt-get source epdfview
 ls
 cd epdfview-0.1.8
 #SEGUNDA PARTE
