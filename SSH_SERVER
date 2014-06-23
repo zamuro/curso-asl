@@ -1,0 +1,16 @@
+#COMO ROOT
+#Editar archivo configuración ssh: /etc/ssh/sshd_config
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.old
+(editor de su preferencia) /etc/ssh/sshd_config
+#Líneas a modificar en sshd_config
+#	PubkeyAuthentication yes
+#	AuthorizedKeysFile	%h/.ssh/authorized_keys
+#	PasswordAuthentication no
+
+#Reiniciar ssh
+/etc/init.d/ssh restart
+
+#Probar configuración
+ssh localhost
+#Debe devolver "Permission denied (publickey). En ese caso, añadir llave pública a authorized_keys en ~/.ssh
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys

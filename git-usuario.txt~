@@ -10,11 +10,11 @@ ls
 #SEGUNDA PARTE: Añadir directorio git local y conectarse a repositorio remoto
 #1. Crear repositorio local
 cd
-mkdir soporte-7
-cd soporte-7
+mkdir soporte-6
+cd soporte-6
 git init
 ls -la
-git remote add origin git@150.188.18.22:soporte-7
+git remote add origin git@150.188.18.22:soporte-6
 #clave del usuario git: gitasl
 git remote show
 #Debe devolver "origin". Si no lo hace, repite git remote add
@@ -25,7 +25,7 @@ git pull origin master
 #TERCERA PARTE: Añadir directorios y archivos al repo local
 #Como usuario
 cd
-cd soporte-7
+cd soporte-6
 mkdir (cedula)
 cd (cedula)
 nano (cedula)
