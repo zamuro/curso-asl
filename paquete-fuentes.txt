@@ -2,28 +2,29 @@
 #abrir consola como root: su
 #modificar /etc/apt/sources.list: 
 nano /etc/apt/sources.list
-#descomentar linea deb-src
+#añadir linea deb-src
+#	deb-src http://paquetes.canaima.softwarelibre.gob.ve kerepakupai main
 apt-get update
 apt-get install dpkg-dev
 ###
-cd /home/usuario/Escritorio
-mkdir gedit
-cd gedit
-apt-get source gedit
+cd 
+mkdir epdfview
+cd epdfview
+apt-get source epdfview
 ls
-cd gedit-1.24.1+dfsg
+cd epdfview-0.1.8
 #SEGUNDA PARTE
 cd debian
 ls 
 nano control
-#[modificar descripcion. Añadir "Modificado" al final de la línea]
+#modificar descripcion. Añadir "Modificado por (nombre)" al final de la línea
 #guardar: ctrl+o, cerrar: ctrl+x
-cd /home/usuario/Escritorio/gedit/gedit-1.24.1+dfsg
+cd /home/usuario/epdfview/epdfview-0.1.8
 apt-get install devscripts build-essential fakeroot
-apt-get build-dep gedit
+apt-get build-dep epdfview
 debuild -us -uc
-cd /home/usuario/Escritorio/gedit
-dpkg -i gedit*.deb
+cd /home/usuario/epdfview
+dpkg -i epdfview*.deb
 
 
 
