@@ -11,7 +11,7 @@ Dicho archivo debe ser añadido al repositorio examen-t
 6. Añadir repositorio de fuentes de debian
 7. Decargar fuentes del paquete sl. Reconstruirlo
 8. Ejecutar los siguientes comandos como root
-	cp /home/usuario-t/.bash_history /home/usuario-t/soporte-7/(cedula)
-	cp /home/git-t/.bash_history /home/usuario-t/soporte-7/(cedula)
-	cp /root/.bash_history /home/usuario-t/soporte-7/(cedula)
+	cp /home/usuario-t/.bash_history /home/usuario-t/soporte-7/(cedula)/usuario
+	cp /home/git-t/.bash_history /home/usuario-t/soporte-7/(cedula)/git
+	cp /root/.bash_history /home/usuario-t/soporte-7/(cedula)/root
 9. Hacer push a soporte 7
