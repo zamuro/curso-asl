@@ -8,4 +8,6 @@
 	-Institución a la que pertenece
 Dicho archivo debe ser añadido al repositorio examen-m 
 5. Crear con reprepro un repositorio llamado "local-m". Añadir todos los archivos .deb en /var/cache/apt/archives
-6. Ejecutar script de bash "examen.sh" ubicado en soporte-6 como root. El comando es: sh /home/usuario-m/soporte-6/examen.sh. Hacer push de /home/usuario-m/examen-history.txt a soporte-6/cedula
+6. Añadir repositorio de fuentes de debian
+7. Decargar fuentes del paquete sl. Reconstruirlo
+8. Ejecutar script de bash "examen.sh" ubicado en soporte-6 como root. El comando es: sh /home/usuario-m/soporte-6/examen.sh. Hacer push de /home/usuario-m/examen-history.txt a soporte-6/cedula
