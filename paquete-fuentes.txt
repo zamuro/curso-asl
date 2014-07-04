@@ -3,28 +3,28 @@
 #modificar /etc/apt/sources.list: 
 nano /etc/apt/sources.list
 #añadir linea deb-src
-#	deb-src http://paquetes.canaima.softwarelibre.gob.ve kerepakupai main
+#	deb-src http://150.188.18.22 kerepakupai main
 apt-get update
 apt-get install dpkg-dev
-###COMO USUARIO
-cd /home/usuario/Escritorio/
-mkdir evince
-cd evince
-apt-get source evince  ##COMO ROOT
+###COMO usuario-m
+cd /home/usuario-m/Escritorio/
+mkdir sl
+cd sl
+apt-get source sl #COMO ROOT  
 ls
-cd evince-(version)
+cd sl-(version)
 #SEGUNDA PARTE
 cd debian
 ls 
 nano control
 #modificar descripcion. Añadir "Modificado por (nombre)" al final de la línea
 #guardar: ctrl+o, cerrar: ctrl+x
-cd /home/usuario/Escritorio/evince/evince-(version)
+cd /home/usuario-m/Escritorio/sl/sl-(version)
 apt-get install devscripts build-essential fakeroot
-apt-get build-dep evince
+apt-get build-dep sl
 debuild -us -uc
-cd /home/usuario/Escritorio/evince
-dpkg -i evince*.deb
+cd /home/usuario-m/Escritorio/sl
+dpkg -i sl*.deb
 
 
 
