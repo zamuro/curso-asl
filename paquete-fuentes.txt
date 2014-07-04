@@ -3,7 +3,7 @@
 #modificar /etc/apt/sources.list: 
 nano /etc/apt/sources.list
 #añadir linea deb-src
-#	deb-src http://150.188.18.22 kerepakupai main
+#	deb-src http://paquetes.canaima.softwarelibre.gob.ve kerepakupai main
 apt-get update
 apt-get install dpkg-dev
 ###COMO usuario-m
