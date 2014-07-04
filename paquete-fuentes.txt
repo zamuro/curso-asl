@@ -6,24 +6,25 @@ nano /etc/apt/sources.list
 #	deb-src http://paquetes.canaima.softwarelibre.gob.ve kerepakupai main
 apt-get update
 apt-get install dpkg-dev
-###COMO usuario-m
-cd /home/usuario-m/Escritorio/
+###COMO usuario-t
+cd /home/usuario-t/Escritorio/
 mkdir sl
 cd sl
 apt-get source sl #COMO ROOT  
 ls
 cd sl-(version)
 #SEGUNDA PARTE
-cd debian
-ls 
-nano control
-#modificar descripcion. Añadir "Modificado por (nombre)" al final de la línea
+nano sl.h
+#AÑADIR NOMBRE en línea 55
 #guardar: ctrl+o, cerrar: ctrl+x
-cd /home/usuario-m/Escritorio/sl/sl-(version)
+cd /home/usuario-t/Escritorio/sl/sl-(version)
 apt-get install devscripts build-essential fakeroot
 apt-get build-dep sl
+dpkg-source --commit
+#Al pedir nombre del parche, colocar su nombre
+#guardar y salir de la instancia de nano que abre automáticamente
 debuild -us -uc
-cd /home/usuario-m/Escritorio/sl
+cd /home/usuario-t/Escritorio/sl
 dpkg -i sl*.deb
 
 
