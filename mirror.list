@@ -14,12 +14,9 @@ set _tilde 0
 #
 ############# end config ##############
 
+deb http://150.188.18.22 kerepakupai main 
 #deb http://ftp.us.debian.org/debian unstable main contrib non-free
 #deb-src http://ftp.us.debian.org/debian unstable main contrib non-free
-deb http://paquetes.canaima.softwarelibre.gob.ve kerepakupai main aportes no-libres
-deb-src http://paquetes.canaima.softwarelibre.gob.ve kerepakupai main aportes no-libres
-deb http://paquetes.canaima.softwarelibre.gob.ve kukenan main aportes no-libres
-deb-src http://paquetes.canaima.softwarelibre.gob.ve kukenan main aportes no-libres
 
 # mirror additional architectures
 #deb-alpha http://ftp.us.debian.org/debian unstable main contrib non-free
