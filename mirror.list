@@ -14,7 +14,7 @@ set _tilde 0
 #
 ############# end config ##############
 
-deb http://150.188.18.22 kerepakupai main 
+deb http://150.188.18.22/repositorio kerepakupai main 
 #deb http://ftp.us.debian.org/debian unstable main contrib non-free
 #deb-src http://ftp.us.debian.org/debian unstable main contrib non-free
 
