@@ -1,9 +1,0 @@
-Origin: Academia de Software Libre
-Label: Respositorio local
-Suite: stable
-Codename: kerepakupai
-Architectures: i386
-Components: main contab 
-Description: Repositorio local para los paquetes de la institución
-DebIndices: Packages Release .gz .bz2
-SignWith: B740E5BB
