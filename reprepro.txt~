@@ -25,7 +25,7 @@ Description: Repositorio local para los paquetes de la institución
 DebIndices: Packages Release .gz .bz2
 SignWith: (Id. de la clave creada)
 #ENTRAR AL DIRECTORIO DEL REPOSITORIO Y EXPORTAR
-cd /var/www/repositorio/ && reprepro --ask-passphrase -VVV export
+cd /var/www/repositorio/ && reprepro -VVV export
 #CREAR ENLACES
 reprepro -VVV createsymlinks
 #AGREGAR PAQUETES

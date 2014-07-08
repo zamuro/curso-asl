@@ -1,0 +1,53 @@
+#PRIMERA PARTE: Clonar repositorio Git
+#1. Como root
+apt-get install git
+#2. Como usuario
+cd
+git clone https://github.com/zamuro/curso-asl.git
+cd curso-asl
+ls
+
+#SEGUNDA PARTE: Añadir directorio git local y conectarse a repositorio remoto
+#1. Crear repositorio local
+cd
+mkdir soporte-7
+cd soporte-7
+git init
+ls -la
+git remote add origin git@150.188.18.22:soporte-7
+#clave del usuario git: gitasl
+git remote show
+#Debe devolver "origin". Si no lo hace, repite git remote add
+git remote show origin
+#Debe devolver los datos del repo
+git pull origin master
+
+#TERCERA PARTE: Añadir directorios y archivos al repo local
+#Como usuario
+cd
+cd soporte-7
+mkdir (cedula)
+cd (cedula)
+nano (cedula)
+#Añadir los siguientes datos
+#	(nombre)
+#	(cedula)
+#	(institucion)
+#	(correo electrónico)
+#	(número de teléfono)
+#guardar y salir de nano
+cd ..
+git pull origin master
+git add .
+git commit -m "datos de (nombre)"
+git push origin master
+
+
+
+
+
+
+
+
+
+

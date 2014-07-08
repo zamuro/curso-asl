@@ -6,4 +6,4 @@ Architectures: i386
 Components: main contab 
 Description: Repositorio local para los paquetes de la institución
 DebIndices: Packages Release .gz .bz2
-SignWith: AA7BB8CF
+SignWith: B740E5BB
