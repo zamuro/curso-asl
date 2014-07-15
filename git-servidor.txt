@@ -1,26 +1,27 @@
  ###PRIMERA PARTE: LADO DEL SERVIDOR
 ##COMO ROOT
 apt-get install git git-core openssh-server
-useradd -d /opt/git-tarde -s /bin/bash -r -m git-tarde
-passwd git-tarde
-##COMO USUARIO GIT-TARDE
+useradd -d /opt/git-12 -s /bin/bash -r -m git-12
+passwd git-12
+##COMO USUARIO git-12
 cd
-mkdir soporte-local
-cd soporte-local
+mkdir curso-local
+cd curso-local
 git --bare init
 
 ###SEGUNDA PARTE: LADO DEL CLIENTE
 ##COMO USUARIO REGULAR
 cd
-mkdir soporte-local-tarde
-cd soporte-local-tarde
+mkdir curso-local
+cd curso-local
 git init
-git remote add local git-tarde@localhost:soporte-local
+cat /home/usuario-m/.ssh/id_rsa.pub | ssh git-12@localhost "cat > .ssh/authorized_keys"
+git remote add local git-12@localhost:curso-local
 git remote show local
 
 #COMO USUARIO REGULAR
 cd
-cd soporte-7
+cd soporte-12
 cat ~/.ssh/id_rsa.pub > (cedula)/id_rsa.pub
 git add (cedula)/id_rsa.pub
 git commit -m "Llave pública de (nombre)"
