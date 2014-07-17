@@ -1,6 +1,6 @@
 #TOMADO DE http://mogaal.com/articulos/kernel-a-la-debian.html
 #como root
-apt-get install kernel-package libncurses5-dev
+apt-get install kernel-package libncurses5-dev bc
 cd /usr/src
 tar -xf (directorio donde se descargó la fuente del kernel)/linux.tar
 cd linux-(Versión que hayan descargado)
