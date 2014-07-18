@@ -1,16 +1,11 @@
-1. Clonar soporte-9 de 150.188.18.22 en el home de usuario-t
-2. Cambiar repositorios a http://150.188.18.22/debian squeeze main
-3. Crear llave ssh, añadirla a soporte-9/(cedula), hacer push
-4. Crear un archivo Examen-(Número de la Cédula de Identidad) con los siguientes datos:
-	-Nombre Completo
-	-Cédula de Indentidad
-	-Dirección de correo electrónico
-	-Institución a la que pertenece
-Dicho archivo debe ser añadido al repositorio soporte-9
-5. Crear con reprepro un repositorio llamado "local-t". Añadir todos los archivos .deb que estén en /var/cache/apt/archives.
-	5.1 Subir a soporte-9 archivo Packages y clave asc
-6. Instalar apt-mirror, configurar mirror.list. Enviar mirror.list a soporte-9/(cedula)
-7. Añadir repositorio de fuentes de debian. Usar ftp.de.debian.org
-8. Decargar fuentes del paquete evince. Reconstruirlo
-9. Enviar history de todos los tty usados a soporte-9
-10. Hacer push a soporte-9
+1. Como root y como usuario-m, ejecutar history -cw
+2. Añadir llave ssh a soporte-12/(cedula)
+3. Crear llave GPG, exportarla a soporte12/(cedula). Dicho archivo debe ser añadido al repositorio soporte-12
+4. Crear con reprepro un repositorio llamado "examen12". Añadir todos los archivos .deb de libreoffice que estén en /var/cache/apt/archives.
+	4.1 Subir a soporte-12/(cedula) archivo Packages y clave asc
+5. Añadir repositorio de fuentes de debian. Usar ftp.de.debian.org
+6. Decargar fuentes del paquete evince. Reconstruirlo
+7. Realizar las siguientes acciones
+	7.1 Como root, ejecutar history > soporte12/(cedula)/root.history
+	7.2 Como usuario-m, ejecutar history > soporte12/(cedula)/usuario.history
+8. Hacer push de todos los archivos modificados a soporte-12
