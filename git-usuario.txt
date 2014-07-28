@@ -1,7 +1,7 @@
 #PRIMERA PARTE: Clonar repositorio Git
 #1. Como root
 apt-get install git
-#2. Como usuario-m
+#2. Como usuario-t
 cd
 git clone https://github.com/zamuro/curso-asl.git
 cd curso-asl
@@ -10,11 +10,11 @@ ls
 #SEGUNDA PARTE: Añadir directorio git local y conectarse a repositorio remoto
 #1. Crear repositorio local
 cd
-mkdir soporte-12
-cd soporte-12
+mkdir soporte-13
+cd soporte-13
 git init
 ls -la
-git remote add origin git@150.188.18.22:soporte-12
+git remote add origin git@150.188.18.22:soporte-13
 #clave del usuario git: gitasl
 git remote show
 #Debe devolver "origin". Si no lo hace, repite git remote add
@@ -25,7 +25,7 @@ git pull origin master
 #TERCERA PARTE: Añadir directorios y archivos al repo local
 #Como usuario
 cd
-cd soporte-12
+cd soporte-13
 mkdir (cedula)
 cd (cedula)
 nano (cedula)
