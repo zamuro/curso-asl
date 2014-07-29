@@ -1,9 +1,9 @@
  ###PRIMERA PARTE: LADO DEL SERVIDOR
 ##COMO ROOT
 apt-get install git git-core openssh-server
-useradd -d /opt/git-12 -s /bin/bash -r -m git-12
-passwd git-12
-##COMO USUARIO git-12
+useradd -d /opt/git-13 -s /bin/bash -r -m git-13
+passwd git-13
+##COMO USUARIO git-13
 cd
 mkdir curso-local
 cd curso-local
@@ -15,8 +15,8 @@ cd
 mkdir curso-local
 cd curso-local
 git init
-cat /home/usuario-m/.ssh/id_rsa.pub | ssh git-12@localhost "cat > .ssh/authorized_keys"
-git remote add local git-12@localhost:curso-local
+cat /home/usuario-t/.ssh/id_rsa.pub | ssh git-13@localhost "cat > .ssh/authorized_keys"
+git remote add local git-13@localhost:curso-local
 git remote show local
 
 #COMO USUARIO REGULAR
