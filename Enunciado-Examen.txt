@@ -1,11 +1,11 @@
-1. Como root y como usuario-m, ejecutar history -cw
-2. Añadir llave ssh a soporte-12/(cedula)
-3. Crear llave GPG, exportarla a soporte12/(cedula). Dicho archivo debe ser añadido al repositorio soporte-12
-4. Crear con reprepro un repositorio llamado "examen12". Añadir todos los archivos .deb de libreoffice que estén en /var/cache/apt/archives.
-	4.1 Subir a soporte-12/(cedula) archivo Packages y clave asc
+1. Como root y como usuario-t, ejecutar history -cw
+2. Añadir llave ssh a soporte-13/(cedula)
+3. Crear llave GPG, exportarla a soporte-13/(cedula). Dicho archivo debe ser añadido al repositorio soporte-13
+4. Crear con reprepro un repositorio llamado "examen-13". Añadir todos los archivos .deb de libreoffice que estén en /var/cache/apt/archives.
+	4.1 Subir a soporte-13/(cedula) archivo Packages.bz2 y clave asc
 5. Añadir repositorio de fuentes de debian. Usar ftp.de.debian.org
 6. Decargar fuentes del paquete evince. Reconstruirlo
 7. Realizar las siguientes acciones
-	7.1 Como root, ejecutar history > soporte12/(cedula)/root.history
-	7.2 Como usuario-m, ejecutar history > soporte12/(cedula)/usuario.history
-8. Hacer push de todos los archivos modificados a soporte-12
+	7.1 Como root, ejecutar history > soporte-13/(cedula)/root.history
+	7.2 Como usuario-m, ejecutar history > soporte-13/(cedula)/usuario.history
+8. Hacer push de todos los archivos modificados a soporte-13
