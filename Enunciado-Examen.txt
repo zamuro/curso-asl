@@ -1,10 +1,10 @@
-1. Como root y como usuario-t, ejecutar history -cw
-2. Añadir llave ssh a soporte-13/(cedula)
-3. Crear llave GPG, exportarla a soporte-13/(cedula). Dicho archivo debe ser añadido al repositorio soporte-13
-4. Crear con reprepro un repositorio llamado "examen-13". Añadir todos los archivos .deb de libreoffice que estén en /var/cache/apt/archives.
-	4.1 Subir a soporte-13/(cedula) archivo Packages.bz2 y clave asc
-5. Añadir repositorio de fuentes de debian. Usar ftp.de.debian.org
-6. Decargar fuentes del paquete evince. Reconstruirlo
+1. Clonar repositorio soporte-13
+2. Cambiar repositorios del sources.list a "http://150.188.18.22/debian squeeze main"
+3. Crear llave ssh, añadirla al repositorio git de soporte-13 (150.188.18.22)
+4. Crear llave GPG, exportarla a soporte-13/(cedula). Dicho archivo debe ser añadido al repositorio soporte-13
+5. Configurar apt-mirror
+	5.1 Añadir a soporte-13/cedula el archivo mirror.list generado y modificado
+6. Decargar fuentes del paquete sl. Reconstruirlo
 7. Realizar las siguientes acciones
 	7.1 Como root, ejecutar history > soporte-13/(cedula)/root.history
 	7.2 Como usuario-m, ejecutar history > soporte-13/(cedula)/usuario.history
