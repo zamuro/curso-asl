@@ -6,6 +6,7 @@ cd /home/(usuario)/iso-15
 #Ejecutar script de inicialización
 sh (ruta absoluta de curso-asl)/createiso.sh
 #Crear entorno de instalación
+lb config
 lb bootstrap
 #Crear jaula chroot
 lb chroot
