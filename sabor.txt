@@ -1,0 +1,22 @@
+#Instala paquetes necesarios para crear la iso
+apt-get install debootstrap live-build
+#Crear directorio de trabajo
+mkdir /home/(usuario)/iso-15
+cd /home/(usuario)/iso-15
+#Ejecutar script de inicialización
+sh (ruta absoluta de curso-asl)/createiso.sh
+#Crear entorno de instalación
+lb bootstrap
+#Crear jaula chroot
+lb chroot
+cd chroot
+chroot .
+#Instalar paquetes
+tasksel
+#Configurar entorno
+#Crear cuentas de usuario
+adduser (usuario)
+passwd usuario
+passwd
+#Crear iso. Usar este paso solamente cuando esté finalizada la configuración
+lb binary
