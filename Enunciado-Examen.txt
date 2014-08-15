@@ -1,11 +1,13 @@
-1. Clonar repositorio soporte-15
-2. Cambiar repositorios del sources.list a "http://150.188.18.22/repositorio squeeze main"
-3. Crear repositorio git local llamado local-15, añadir llave ssh
-4. Crear repositorio con reprepro llamado repositorio-15, añadir archivo distributions a soporte-15/(cedula)
+1. Clonar repositorio soporte-14
+2. Cambiar repositorios del sources.list a "http://150.188.18.22/repositorio squeeze main", y añadir repositorios de fuentes de debian squeeze de debian.cantv.net
+3. Crear repositorio git local llamado local-14, añadir llave ssh
+4. Crear directorio /home/(usuario)/local-14 y dos repositorios git remotos:
+	4.1 Alias "local": El repositorio git local-14 ya creado
+	4.1 Alias "remoto": El repositorio soporte-14 en el servidor
 5. Configurar apt-mirror
-	5.1 Añadir a soporte-15/cedula el archivo mirror.list generado y modificado
+	5.1 Añadir a soporte-14/cedula el archivo mirror.list generado y modificado
 6. Decargar fuentes del paquete sl. Reconstruirlo
 7. Realizar las siguientes acciones
-	7.1 Como root, ejecutar history > soporte-15/(cedula)/root.history
-	7.2 Como usuario-m, ejecutar history > soporte-15/(cedula)/usuario.history
-8. Hacer push de todos los archivos modificados a soporte-15
+	7.1 Como root, ejecutar history > soporte-14/(cedula)/root.history
+	7.2 Como usuario-m, ejecutar history > soporte-14/(cedula)/usuario.history
+8. Hacer push de todos los archivos modificados a soporte-14
